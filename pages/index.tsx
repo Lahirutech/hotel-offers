@@ -7,7 +7,7 @@ import ProTip from '../src/ProTip';
 import Copyright from '../src/Copyright';
 import Chat from '../src/components/chat/chat';
 import styles from '../src/styles/home.module.scss';
-import Sidebar from '../src/components/Sidebar/sidebar';
+import Sidebar from '../src/components/Sidebar/Sidebar';
 export default function Home() {
   return (
     <div className={styles.home}>
