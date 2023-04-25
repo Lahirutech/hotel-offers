@@ -1,20 +1,29 @@
-import * as React from 'react';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
+import React from 'react';
 import Box from '@mui/material/Box';
-import Link from '../src/Link';
-import ProTip from '../src/ProTip';
-import Copyright from '../src/Copyright';
-import Chat from '../src/components/chat/chat';
-import styles from '../src/styles/home.module.scss';
-import Sidebar from '../src/components/Sidebar/Sidebar';
-export default function Home() {
+import { Stack } from '@mui/material';
+import LeftBar from '../src/components/LeftBar';
+import Content from '../src/components/Content';
+import RightBar from '../src/components/RightBar';
+import Navbar from '../src/components/Navbar';
+
+export default function Home(props: {
+  toggleTheme: React.MouseEventHandler<HTMLAnchorElement>;
+}) {
   return (
-    <div className={styles.home}>
-      <div className={styles.container}>
-        <Sidebar />
-        <Chat />
-      </div>
-    </div>
+    <Box
+      bgcolor={'background.default'}
+      color={'text.primary'}
+    >
+      <Navbar />
+      <Stack
+        direction='row'
+        spacing={2}
+        justifyContent={'space-between'}
+      >
+        <LeftBar toggleTheme={props.toggleTheme} />
+        <Content />
+        <RightBar />
+      </Stack>
+    </Box>
   );
 }
