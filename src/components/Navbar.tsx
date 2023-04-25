@@ -28,7 +28,7 @@ const Navbar = () => {
             sx={{ display: { xs: 'none', sm: 'block' } }}
             variant='h4'
           >
-            Analytics
+            Hotel Offers
           </Typography>{' '}
           <DataUsageOutlined
             fontSize='large'
